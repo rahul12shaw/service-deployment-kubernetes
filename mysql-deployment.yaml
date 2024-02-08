@@ -2,21 +2,22 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: db
+    app: db1
   name: db
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: db
+      app: mysql-db1
   template:
     metadata:
       labels:
-        app: db
+        app: mysql-db1
     spec:
       containers:
-      - image: kharatramesh/vadapavimages:php-database
-        name: php-database
+      - image: mysql
+        name: mysql-database
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: "123"
+          value: "root"
+

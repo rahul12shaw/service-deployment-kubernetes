@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: login
+  name: login
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: login
+  template:
+    metadata:
+      labels:
+        app: login
+    spec:
+      containers:
+      - image: kharatramesh/vadapavimages:itc-login
+        name: login
+        env:
+        - name: "spring.datasource.username"
+          value: root
+        - name: "spring.datasource.password"
+          value: root
+
