@@ -19,5 +19,5 @@ spec:
         name: mysql-database
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: "root"
+          value: "root1234"
 

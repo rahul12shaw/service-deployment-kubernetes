@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     app: mongo-db
-  name: mongo-db1
+  name: mongo-service
 spec:
   ports:
   - port: 27017

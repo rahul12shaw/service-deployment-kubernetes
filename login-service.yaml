@@ -3,7 +3,7 @@ kind: Service
 metadata:
   labels:
     app: login
-  name: harsh-login
+  name: login
 spec:
   ports:
   - port: 8083
